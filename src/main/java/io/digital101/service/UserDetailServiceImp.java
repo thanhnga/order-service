@@ -3,6 +3,8 @@ package io.digital101.service;
 import io.digital101.entity.UserRole;
 import io.digital101.entity.Users;
 import io.digital101.repository.UserRepository;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -15,12 +17,12 @@ import java.util.Collection;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+
+@AllArgsConstructor
+@NoArgsConstructor
 @Service
 public class UserDetailServiceImp implements UserDetailsService {
-
-    @Autowired
     private UserRepository userRepository;
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         final Users user = userRepository.findByUsername(username);

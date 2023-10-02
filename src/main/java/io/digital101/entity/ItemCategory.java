@@ -4,7 +4,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 public class ItemCategory  {
     @Id
@@ -16,19 +20,5 @@ public class ItemCategory  {
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
-    public Item getMenuItem() {
-        return item;
-    }
 
-    public void setMenuItem(Item item) {
-        this.item = item;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
 }

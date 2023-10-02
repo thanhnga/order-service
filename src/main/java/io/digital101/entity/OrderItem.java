@@ -4,7 +4,11 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 public class OrderItem {
 
@@ -18,19 +22,5 @@ public class OrderItem {
     @JoinColumn(name = "item_id")
     private Item item;
 
-    public Orders getCustomerOrder() {
-        return orders;
-    }
 
-    public void setCustomerOrder(Orders orders) {
-        this.orders = orders;
-    }
-
-    public Item getItem() {
-        return item;
-    }
-
-    public void setItem(Item item) {
-        this.item = item;
-    }
 }
