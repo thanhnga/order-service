@@ -25,8 +25,8 @@ services:
     depends_on:
       - postgres
     volumes:
-      - order-service-data:/app/data
+      - app-data:/app/data
 
 volumes:
   postgres-data:
-  order-service-data:
+  app-data:

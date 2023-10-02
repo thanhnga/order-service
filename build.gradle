@@ -24,6 +24,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-hateoas'
 	implementation 'org.postgresql:postgresql'
+	implementation 'ch.qos.logback:logback-classic'
 //	implementation 'org.liquibase:liquibase-core:4.22.0'
 
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
