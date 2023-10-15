@@ -13,5 +13,10 @@
 - run: `./gradlew test --tests io.digital101.RSAKeyPairGenerator.generateKeyPair` at terminal. It write key to `app.key` and `app.key.pub`
 
 # HOW TO TEST
-- get token: `export TOKEN='curl -XPOST user:password@localhost:8080/token'` 
-- get request by token: `curl -H "Authorization: Bearer $TOKEN" localhost:8080 && echo`
+## admin user
+- get token: `curl -XPOST owner:owner@localhost:8080/token` 
+- get request with owner token: `localhost:8080/admin/`
+
+## operator user
+- get token: `curl -XPOST operator:operator@localhost:8080/token`
+- get request with operator token: `localhost:8080/operator/`
